@@ -11,7 +11,8 @@
         android:text="@string/submit"
         android:id="@+id/submit"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:elegantTextHeight="true" />
 
     <ImageView
         android:layout_width="400px"
@@ -20,8 +21,7 @@
         android:src="@drawable/icon"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -43,15 +43,10 @@
                 android:ems="10"
                 android:id="@+id/name"
                 android:layout_column="0"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:layout_span="0"
                 android:hint="Name"
                 android:layout_margin="2dp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <EditText
                 android:layout_width="wrap_content"
@@ -59,10 +54,16 @@
                 android:inputType="phone"
                 android:ems="10"
                 android:id="@+id/phone"
-                android:layout_column="0"
-                android:layout_weight="1"
+                android:layout_column="2"
+                android:layout_weight="0"
                 android:hint="Phone"
                 android:layout_margin="2dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
         </TableRow>
 
         <TableRow
@@ -74,13 +75,13 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/email"
+                android:id="@+id/depot"
                 android:layout_column="0"
                 android:layout_weight="1"
                 android:editable="true"
                 android:enabled="true"
                 android:clickable="true"
-                android:hint="Email"
+                android:hint="Depot"
                 android:layout_margin="2dp" />
         </TableRow>
 
@@ -104,6 +105,60 @@
                 android:layout_margin="2dp" />
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/identityType"
+                android:layout_column="0"
+                android:spinnerMode="dropdown"
+                android:gravity="bottom"
+                android:padding="0dip"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.3" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/identityText"
+                android:layout_column="2"
+                android:hint="Id Number" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attach"
+                android:id="@+id/identityButton"
+                android:elegantTextHeight="true" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
     </TableLayout>
+
+    <ImageView
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:id="@+id/identityImage"
+        android:src="@mipmap/icon1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_above="@+id/details"
+        android:layout_toEndOf="@+id/photo" />
 
 </RelativeLayout>

@@ -7,4 +7,5 @@
     <string name="push_success">Successfully submitted the details.</string>
     <string name="push_failure">Error in pushing details. Please try again.</string>
     <string name="ok">ok</string>
+    <string name="attach">Attach</string>
 </resources>
